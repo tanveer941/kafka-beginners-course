@@ -21,13 +21,13 @@ public class ProducerDemoKeys {
         Properties properties = new Properties();
 
         // connect to Localhost
-//        properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
+        properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
 
         // connect to Conduktor Playground
-        properties.setProperty("bootstrap.servers", "cluster.playground.cdkt.io:9092");
-        properties.setProperty("security.protocol", "SASL_SSL");
-        properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"your-username\" password=\"your-password\";");
-        properties.setProperty("sasl.mechanism", "PLAIN");
+//        properties.setProperty("bootstrap.servers", "cluster.playground.cdkt.io:9092");
+//        properties.setProperty("security.protocol", "SASL_SSL");
+//        properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"your-username\" password=\"your-password\";");
+//        properties.setProperty("sasl.mechanism", "PLAIN");
 
         // set producer properties
         properties.setProperty("key.serializer", StringSerializer.class.getName());
@@ -41,7 +41,7 @@ public class ProducerDemoKeys {
 
             for (int i=0; i<10; i++){
 
-                String topic = "demo_java";
+                String topic = "demo_javap";
                 String key = "id_" + i;
                 String value = "hello world " + i;
 
